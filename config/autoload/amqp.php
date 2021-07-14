@@ -33,6 +33,8 @@ return [
             'context' => null,
             'keepalive' => false,
             'heartbeat' => 3,
+            //使用 AMQP 组件报 Swoole\Error: API must be called in the coroutine 错误
+            'close_on_destruct'=>false,
         ],
     ],
 ];
